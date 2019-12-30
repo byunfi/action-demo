@@ -3,7 +3,7 @@ name: CI
 on: 
   push:
     tags: 
-      - 0.0.2
+      - 0.0.*
 
 jobs:
   build:
