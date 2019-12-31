@@ -19,5 +19,8 @@ jobs:
         pip install pipenv
         pipenv install requests
         pipenv run python ./test.py
-        
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./production/result.txt
         
