@@ -18,10 +18,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install requests
+    - name: gen package
+      run:
         pipenv run python ./test.py
     - name: Release
       uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
       with:
         files: ./production/result.txt
       env:
